@@ -118,7 +118,7 @@ function createParticles() {
 }
 
 /* ─────────────────────────────────────────
-   triggerTransition — the crazy entrance animation
+   triggerTransition — the entrance animation
    Timeline:
      0ms  — flash + particle burst
      50ms — ring burst from center
