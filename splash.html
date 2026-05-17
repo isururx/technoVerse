@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>TECHNOVERSE — Enter</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       SPLASH SCREEN
+       ══════════════════════════════════════════ -->
+  <div id="splash">
+
+    <!-- Radial pulse rings (animated via CSS) -->
+    <div class="pulse-ring"></div>
+    <div class="pulse-ring"></div>
+    <div class="pulse-ring"></div>
+
+    <div class="splash-content">
+
+      <!-- AR bracket icon -->
+      <div class="ar-icon">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 20V12C8 9.79 9.79 8 12 8H20"        stroke="#1565c0" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M44 8H52C54.21 8 56 9.79 56 12V20"     stroke="#0057d9" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M56 44V52C56 54.21 54.21 56 52 56H44"  stroke="#1565c0" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M20 56H12C9.79 56 8 54.21 8 52V44"     stroke="#0057d9" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- AR cube wireframe -->
+          <path d="M22 32L32 26L42 32L32 38L22 32Z" stroke="#1976d2" stroke-width="2" fill="rgba(21,101,192,0.1)"/>
+          <path d="M32 26V38"     stroke="#1976d2" stroke-width="1.5" stroke-dasharray="2 2"/>
+          <path d="M22 32L32 38" stroke="#1976d2" stroke-width="1.5" opacity="0.5"/>
+          <path d="M42 32L32 38" stroke="#1976d2" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="32" cy="26" r="2" fill="#0057d9"/>
+          <circle cx="22" cy="32" r="2" fill="#1565c0"/>
+          <circle cx="42" cy="32" r="2" fill="#1565c0"/>
+          <circle cx="32" cy="38" r="2" fill="#0057d9"/>
+        </svg>
+      </div>
+
+      <h1 class="splash-title">TECHNO<span>VERSE</span></h1>
+      <p class="splash-sub">AR Faculty Experience</p>
+
+      <!-- ── Hold-to-Enter Button ── -->
+      <div class="hold-btn-wrap">
+
+        <!-- SVG progress ring -->
+        <svg class="progress-ring" viewBox="0 0 180 180">
+          <defs>
+            <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%"   stop-color="#1565c0"/>
+              <stop offset="100%" stop-color="#0057d9"/>
+            </linearGradient>
+            <filter id="ringGlow">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <circle class="track" cx="90" cy="90" r="70"/>
+          <circle class="fill"  id="ringFill" cx="90" cy="90" r="70"/>
+        </svg>
+
+        <button class="hold-btn" id="holdBtn">
+          <div class="scan-line"></div>
+          <div class="hold-icon">⬡</div>
+          <div class="hold-label">ENTER</div>
+        </button>
+
+      </div><!-- /.hold-btn-wrap -->
+
+      <p class="hold-hint">Hold to Initialize</p>
+
+    </div><!-- /.splash-content -->
+  </div><!-- /#splash -->
+
+
+  <!-- ══════════════════════════════════════════
+       TRANSITION OVERLAY
+       ══════════════════════════════════════════ -->
+  <div id="transition-overlay">
+    <div class="flash-layer"       id="flashLayer"></div>
+    <div class="grid-warp"         id="gridWarp"></div>
+    <div class="scan-burst"        id="scanBurst"></div>
+    <div class="shatter-container" id="shatterContainer"></div>
+    <div class="center-ring-burst" id="centerRing"></div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

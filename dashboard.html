@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>TECHNOVERSE — Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Dashboard loads visible immediately (no splash transition needed) */
+    body { overflow-y: auto; }
+    #homepage {
+      position: relative;
+      opacity: 1;
+      transform: none;
+      pointer-events: all;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       HOMEPAGE / DASHBOARD
+       ══════════════════════════════════════════ -->
+  <div id="homepage">
+
+    <!-- Navigation -->
+    <nav class="hp-nav">
+      <div class="hp-menu-icon" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="hp-nav-logo">TECHNOVERSE</div>
+      <div style="width:22px"></div>
+    </nav>
+
+    <!-- Hero banner -->
+    <div class="hp-hero">
+      <div class="hp-hero-text">
+        <h1>TECHNOVERSE</h1>
+        <p>Explore the Future of Education</p>
+      </div>
+    </div>
+
+    <!-- CTA buttons -->
+    <div class="hp-buttons">
+      <button class="btn-primary" id="btnAR">
+        <span>⬡</span> Initiate AR Portal
+      </button>
+      <div class="btn-row">
+        <button class="btn-secondary" id="btnTour">⊙ Virtual Tour</button>
+        <button class="btn-secondary" id="btnFaculty">⊞ Faculty Portal</button>
+      </div>
+    </div>
+
+    <!-- Feature cards -->
+    <div class="hp-section-title">AR Features</div>
+
+    <div class="cards-scroll">
+      <div class="feature-card">
+        <div class="card-icon">🏛️</div>
+        <div class="card-title">CAMPUS AR</div>
+        <div class="card-desc">Overlay info on real-world campus landmarks</div>
+      </div>
+      <div class="feature-card">
+        <div class="card-icon">📡</div>
+        <div class="card-title">LIVE SCAN</div>
+        <div class="card-desc">Point &amp; discover faculty rooms, labs, offices</div>
+      </div>
+      <div class="feature-card">
+        <div class="card-icon">🧠</div>
+        <div class="card-title">AI GUIDE</div>
+        <div class="card-desc">Personalized navigation with AI assistant</div>
+      </div>
+      <div class="feature-card">
+        <div class="card-icon">🔗</div>
+        <div class="card-title">DATA MESH</div>
+        <div class="card-desc">Connect to faculty systems in real time</div>
+      </div>
+    </div>
+
+    <!-- AR badge banner -->
+    <div class="ar-badge">
+      <div class="ar-badge-icon">⬡</div>
+      <div class="ar-badge-text">
+        <h3>AR EXPERIENCE READY</h3>
+        <p>Customizable AR overlays for the Faculty of Technology. Point your camera to begin.</p>
+      </div>
+    </div>
+
+  </div><!-- /#homepage -->
+
+  <script>
+    // Back-nav: menu icon returns to splash
+    document.getElementById('menuToggle').addEventListener('click', () => {
+      window.location.href = 'splash.html';
+    });
+  </script>
+</body>
+</html>
