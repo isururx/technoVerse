@@ -20,7 +20,7 @@ ringFill.style.strokeDasharray  = CIRCUMFERENCE;
 ringFill.style.strokeDashoffset = CIRCUMFERENCE;
 
 // ── Hold state ──
-const HOLD_DURATION = 1200; // ms to fill the ring
+const HOLD_DURATION = 1000; // ms to fill the ring
 let rafId     = null;
 let startTime = null;
 
@@ -127,6 +127,7 @@ function createParticles() {
     200ms — splash shatters out
     680ms — homepage revealed
 ───────────────────────────────────────── */
+
 function triggerTransition() {
   overlay.classList.add('active');
   createParticles();
@@ -178,6 +179,6 @@ function triggerTransition() {
 
   // 6. Navigate to dashboard
   setTimeout(() => {
-    window.location.href = 'dashboard.html';
+    window.location.href = 'ar/ar.html';
   }, 680);
 }
